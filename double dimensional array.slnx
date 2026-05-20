@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="double dimensional array/double dimensional array.vcxproj" Id="71c368da-043d-4110-955c-3e48df49b145" />
+</Solution>
