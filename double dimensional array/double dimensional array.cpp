@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <vector>
 using namespace std;
 //.
 //
@@ -17,25 +18,39 @@ using namespace std;
 
 int main()
 {
-    float maths_marks, english_marks, science_marks, computing_marks ;
-    cout << "Enter your Maths marks - ";
-    cin >> maths_marks;
+    //float marks_info[][6] = {
+    //    
+    //};
 
-    cout << "Enter your English marks - ";
-    cin >> english_marks;
+    vector<vector<float>> marks_info;
+
+    for (int i = 1; i <= 10; i++) {
+        float maths_marks, english_marks, science_marks, computing_marks;
+ 
+        cout << "================ " << i << " ================" << endl;
+        cout << "Enter your Maths marks - ";
+        cin >> maths_marks;
+
+        cout << "Enter your English marks - ";
+        cin >> english_marks;
+
+        cout << "Enter your Science marks - ";
+        cin >> science_marks;
+
+        cout << "Enter your Computing marks - ";
+        cin >> computing_marks;
+
+        float average, total;
+        total = maths_marks + english_marks + science_marks + computing_marks;
+        average = total / 4;
+
+        cout << "The average marks you attained this time was - " << average << endl;
+
+        marks_info.push_back({ maths_marks, english_marks, science_marks, computing_marks, total, average });
+    }
+   
+
     
-    cout << "Enter your Science marks - ";
-    cin >> science_marks;
-    
-    cout << "Enter your Computing marks - ";
-    cin >> computing_marks;
-
-    float average, total;
-    total = maths_marks + english_marks + science_marks + computing_marks;
-    average = total / 4;
-
-    cout << "The average marks you attained this time was - " << average << endl;
-
 
 
 
