@@ -22,9 +22,15 @@ int main()
     //    
     //};
 
+    // used to create multdimnensional arrays with dynamic sizes
     vector<vector<float>> marks_info;
+    float max_value = 0;
 
-    for (int i = 1; i <= 10; i++) {
+    vector<float> max_row;
+    
+
+
+    for (int i = 1; i <= 5; i++) {
         float maths_marks, english_marks, science_marks, computing_marks;
  
         cout << "================ " << i << " ================" << endl;
@@ -43,15 +49,18 @@ int main()
         float average, total;
         total = maths_marks + english_marks + science_marks + computing_marks;
         average = total / 4;
-
+        
         cout << "The average marks you attained this time was - " << average << endl;
 
         marks_info.push_back({ maths_marks, english_marks, science_marks, computing_marks, total, average });
     }
-   
 
-    
-
-
+    for (auto row : marks_info) {
+        cout << row.at(4) << endl;
+        if (max_value < row.at(4)) {
+            max_value = row.at(4);
+        }
+    }
+    cout << max_value;
 
 }
